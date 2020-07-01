@@ -1,6 +1,6 @@
 import os
 from string import ascii_uppercase
-from .words import local_word
+from words import local_word
 import sys
 import pathlib
 
