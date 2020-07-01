@@ -15,12 +15,18 @@ Implementation of the hangman game in Pygame. With the ability to ask today's wo
 Pip:
 
 ```sh
-pip install hangthepyman --user
+pip install hangthepyman
+```
+
+after that you can run this on your command line:
+
+```sh
+python -m hangthepyman.the_hangman
 ```
 
 Source:
 
-After cloning head to hangthepyman directory and run:
+After cloning, head to hangthepyman directory and run:
 
 ```sh
 python3 the_hangman.py
