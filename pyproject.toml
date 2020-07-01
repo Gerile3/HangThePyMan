@@ -1,0 +1,37 @@
+[tool.poetry]
+name = "hangthepyman"
+version = "0.0.1"
+description = "\u0016Classic Hangman game with Pygame & Python touch"
+authors = ["Berkay Girgin <berkay.grgn@protonmail.com>"]
+license = "MIT"
+keywords = ["pygame", "hangman", "python3"]
+readme = "README.md"
+homepage = "https://github.com/Gerile3/HangThePyMan"
+repository = "https://github.com/Gerile3/HangThePyMan"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Games/Entertainment :: Arcade",
+    "Topic :: Games/Entertainment :: Puzzle Games",
+]
+
+include = [
+    "fonts/classic.TTF", "icon/icon.png", "images/hangman0.png", "screenshots/screen1.png",
+    "images/hangman1.png", "images/hangman2.png", "images/hangman3.png", "images/hangman4.png",
+    "images/hangman5.png", "images/hangman6.png",
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pygame = "^1.9.6"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
