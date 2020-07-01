@@ -2,6 +2,10 @@
 
 > Classic Hangman game with Pygame & Python touch.
 
+![Python Version][pypi-image]
+![Build Status][pypi-status]
+[![Downloads Stats][pypi-version]][pypi-url]
+
 Implementation of the hangman game in Pygame. With the ability to ask today's word, most used & searched words and bunch of other fun options to play.
 
 ![screen1](screenshots/screen1.png)
@@ -46,3 +50,9 @@ Distributed under the MIT license. See ``LICENSE`` for more information.
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
 5. Create a new Pull Request
+
+<!-- Markdown link & img dfn's -->
+[pypi-image]: https://img.shields.io/pypi/pyversions/hangthepyman
+[pypi-url]: https://pypi.org/project/hangthepyman/
+[pypi-version]: https://img.shields.io/pypi/v/hangthepyman
+[pypi-status]: https://img.shields.io/pypi/status/hangthepyman
