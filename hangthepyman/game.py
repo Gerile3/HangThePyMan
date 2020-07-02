@@ -1,6 +1,6 @@
 import os
 from string import ascii_uppercase
-from words import local_word
+from hangthepyman.words import local_word
 import sys
 import pathlib
 
@@ -17,7 +17,7 @@ class Game:
     GUESSED = ""
     HANGMAN_STATUS = 0
     WON = [False]
-    DIR = str(pathlib.Path(__file__).parent.parent.absolute())
+    DIR = str(pathlib.Path(__file__).parent.absolute())
 
     def __init__(self):
         pygame.init()
