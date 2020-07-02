@@ -21,7 +21,7 @@ pip install hangthepyman
 after that you can run this on your command line:
 
 ```sh
-python -m hangthepyman.the_hangman
+python -m hangthepyman
 ```
 
 Source:
@@ -40,6 +40,8 @@ python3 the_hangman.py
 
 ## Release History
 
+- 0.0.2
+  - Fixed path issue
 - 0.0.1
   - Created the game :)
 
