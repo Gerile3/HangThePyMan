@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hangthepyman"
-version = "0.0.2"
+version = "0.1.0"
 description = "\u0016Classic Hangman game with Pygame & Python touch"
 authors = ["Berkay Girgin <berkay.grgn@protonmail.com>"]
 license = "MIT"
@@ -9,7 +9,7 @@ readme = "README.md"
 homepage = "https://github.com/Gerile3/HangThePyMan"
 repository = "https://github.com/Gerile3/HangThePyMan"
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 4 - Beta",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3.6",
