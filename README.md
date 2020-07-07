@@ -10,6 +10,14 @@ Implementation of the hangman game in Pygame. With the ability to ask today's wo
 
 ![screen1](screenshots/screen1.png)
 
+## Table of Contents
+
+* [Installation](#Installation)
+* [TODO's](#TODO's)
+* [Release History](#Release-History)
+* [Meta](#Meta)
+* [Contributing](#Contributing)
+
 ## Installation
 
 Pip:
@@ -34,16 +42,19 @@ python3 the_hangman.py
 
 ## TODO's
 
-- Add Menu
-- Add Music
-- Complete word functions to improve asked words and add hint option
+* Add Menu
+* Add Music
+* ~~Complete word functions to improve asked words~~ and add hint option
 
 ## Release History
 
-- 0.0.2
-  - Fixed path issue
-- 0.0.1
-  - Created the game :)
+* 0.1.0
+  * Added Random word function. (You now have 20k words to guess!)
+  * Now shows what was the word if u happen to lose or win.
+* 0.0.2
+  * Fixed path issue
+* 0.0.1
+  * Created the game :)
 
 ## Meta
 
