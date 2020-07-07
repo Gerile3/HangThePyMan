@@ -1,12 +1,11 @@
 import os
 from string import ascii_uppercase
-from words import local_word
+from words import random_word
 import sys
 import pathlib
-
-
 import pygame
 import pygame.freetype
+from db_connection import db_connect
 
 
 class Game:
@@ -21,6 +20,8 @@ class Game:
 
     def __init__(self):
         pygame.init()
+        self.conn = db_connect(Game.DIR + "\\db\\words.db")
+        self.word = random_word(self.conn)[1]
         self.game_font = pygame.freetype.Font(Game.DIR + '\\fonts\\classic.TTF', 26)
         self.word_font = pygame.freetype.SysFont("comicsans", 50)
         self.win = pygame.display.set_mode((Game.WIDTH, Game.HEIGHT))
@@ -32,7 +33,6 @@ class Game:
         self.run = True
         self.images = self.load_images()
         self.letter_coordinates = self.load_buttons()
-        self.word = local_word()
 
     def load_images(self):
         images = []
@@ -76,9 +76,15 @@ class Game:
         pygame.display.update()
 
     def display_message(self, message):
+        """Display message function to print out any string to screen.
+
+        Args:
+            message ([str]): The message you would like to print
+        """
         pygame.time.delay(1000)
         self.win.fill(self.b_color)
-        self.word_font.render_to(self.win, (300, 200), message, (0, 0, 0))
+        self.word_font.render_to(self.win, (300, 180), message, (0, 0, 0))
+        self.word_font.render_to(self.win, (331 - len(self.word) * 2, 280), f"Word was {self.word}", (0, 0, 0), size=20)
         pygame.display.update()
         pygame.time.delay(3000)
 
@@ -128,4 +134,5 @@ class Game:
 
     def quit(self):
         pygame.quit()
+        self.conn.close()
         sys.exit()
