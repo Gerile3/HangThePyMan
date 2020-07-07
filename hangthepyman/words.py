@@ -1,24 +1,11 @@
-from random import choice
+import sqlite3
 
 
-def internet_check():
-    # TODO
-    pass
-
-
-def daily_word():
-    # TODO
-    pass
-
-
-def local_word(word=""):
-    words = ["PYTHON", "GAME", "DEVELOP", "STEAM", "FLY"]
-    if word:
+def random_word(conn):
+    cur = conn.cursor()
+    cur.execute("SELECT * FROM wlist ORDER BY RANDOM() LIMIT 1;")
+    try:
+        word = cur.fetchone()
         return word
-    else:
-        return choice(words)
-
-
-def random_word():
-    # TODO
-    pass
+    except sqlite3.Error as err:
+        print("Error:", err)
