@@ -48,9 +48,10 @@ python3 the_hangman.py
 
 ## Release History
 
-* 0.1.0
+* 0.1.1
   * Added Random word function. (You now have 20k words to guess!)
   * Now shows what was the word if u happen to lose or win.
+  * Fixed path issues.
 * 0.0.2
   * Fixed path issue
 * 0.0.1
