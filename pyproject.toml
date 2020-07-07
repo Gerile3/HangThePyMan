@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hangthepyman"
-version = "0.1.0"
+version = "0.1.1"
 description = "\u0016Classic Hangman game with Pygame & Python touch"
 authors = ["Berkay Girgin <berkay.grgn@protonmail.com>"]
 license = "MIT"
