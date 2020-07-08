@@ -48,6 +48,9 @@ python3 the_hangman.py
 
 ## Release History
 
+* 0.1.2
+  * Refactored path codes. There shouldn't be any path problems anymore.
+  Tested on Kali Linux and Win10. Hopefully works on these platforms. If you encounter any problems make sure you have pygame installed.
 * 0.1.1
   * Added Random word function. (You now have 20k words to guess!)
   * Now shows what was the word if u happen to lose or win.
