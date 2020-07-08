@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "hangthepyman"
-version = "0.1.1"
+version = "0.1.2"
 description = "\u0016Classic Hangman game with Pygame & Python touch"
 authors = ["Berkay Girgin <berkay.grgn@protonmail.com>"]
 license = "MIT"
@@ -21,7 +21,7 @@ classifiers = [
 ]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.6"
 pygame = "^1.9.6"
 
 [tool.poetry.dev-dependencies]
