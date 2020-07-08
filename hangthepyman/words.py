@@ -7,5 +7,5 @@ def random_word(conn):
     try:
         word = cur.fetchone()
         return word
-    except sqlite3.Error as err:
-        print("Error:", err)
+    except (sqlite3.Error, sqlite3.OperationalError):
+        print("Error: Could not open database.")
