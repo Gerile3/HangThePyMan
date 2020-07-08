@@ -2,7 +2,7 @@ import os
 from string import ascii_uppercase
 from words import random_word
 import sys
-import pathlib
+from pathlib import Path
 import pygame
 import pygame.freetype
 from db_connection import db_connect
@@ -16,17 +16,17 @@ class Game:
     GUESSED = ""
     HANGMAN_STATUS = 0
     WON = [False]
-    DIR = str(pathlib.Path(__file__).parent.absolute())
+    DIR = Path(__file__).parent.absolute()
 
     def __init__(self):
         pygame.init()
-        self.conn = db_connect(Game.DIR + "\\db\\words.db")
+        self.conn = db_connect(Game.DIR / "db" / "words.db")
         self.word = random_word(self.conn)[1]
-        self.game_font = pygame.freetype.Font(Game.DIR + '\\fonts\\classic.TTF', 26)
+        self.game_font = pygame.freetype.Font(str(Game.DIR / "fonts" / "classic.TTF"), 26)
         self.word_font = pygame.freetype.SysFont("comicsans", 50)
         self.win = pygame.display.set_mode((Game.WIDTH, Game.HEIGHT))
         self.caption = pygame.display.set_caption("Hangman The Game")
-        self.gameIcon = pygame.image.load(Game.DIR + '\\icon\\icon.png')
+        self.gameIcon = pygame.image.load(str(Game.DIR / "icon" / "icon.png"))
         self.icon = pygame.display.set_icon(self.gameIcon)
         self.clock = pygame.time.Clock()
         self.b_color = (255, 255, 255)
@@ -36,9 +36,9 @@ class Game:
 
     def load_images(self):
         images = []
-        location = Game.DIR + "\\images"
+        location = Game.DIR / "images"
         for i in range(len(os.listdir(location))):
-            image = pygame.image.load(location + "\\" + "hangman" + str(i) + ".png")
+            image = pygame.image.load(str(location / "hangman") + str(i) + ".png")
             images.append(image)
         return images
 
