@@ -42,12 +42,16 @@ python3 the_hangman.py
 
 ## TODO's
 
-* Add Menu
+* ~~Add Menu~~
 * Add Music
-* ~~Complete word functions to improve asked words~~ and add hint option
+* ~~Complete word functions to improve asked words~~ and add Hint option
 
 ## Release History
 
+* 0.1.3
+  * fixed directory passings to support python 3.6+
+  * Added Main Menu
+  * Added End Game Screen, you can continue to play now if you wish so.
 * 0.1.2
   * Refactored path codes. There shouldn't be any path problems anymore.
   Tested on Kali Linux and Win10. Hopefully works on these platforms. If you encounter any problems make sure you have pygame installed.
